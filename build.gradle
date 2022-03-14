@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'com.kylebyaka'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.dv8tion:JDA:5.0.0-alpha.4'
+    implementation 'org.springframework.boot:spring-boot-starter:2.6.3'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.3'
+    implementation 'org.postgresql:postgresql:42.3.3'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.2'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.2'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+test {
+    useJUnitPlatform()
+}

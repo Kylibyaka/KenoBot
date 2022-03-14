@@ -1,0 +1,16 @@
+# Project exclude paths
+/.gradle/
+gradle/
+/build/
+/build/classes/java/main/
+# Intellij
+.idea/
+*.iml
+*.iws
+
+*.db
+
+# Package Files #
+*.jar
+*.war
+*.ear
